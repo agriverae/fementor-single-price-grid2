@@ -9,6 +9,7 @@ html {
   box-sizing: border-box;
   font-size: variables.$font-size;
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -35,7 +36,7 @@ main {
 }
 
 .community {
-  padding: 50px;
+  padding: 45px;
   background-color: variables.$white;
   grid-column: 1 / -1;
   border-top-right-radius: 10px;
@@ -55,6 +56,7 @@ main {
   .guarantee {
     color: variables.$light-green;
     margin-bottom: 15px;
+    font-weight: 600;
   }
 
   .description {
@@ -69,10 +71,13 @@ main {
   color: variables.$white;
   box-shadow: 6px 6px 6px -3px rgba(0, 0, 0, 0.2),
     -6px 6px 6px -3px rgba(0, 0, 0, 0.2);
+  /* Para que no tenga el borde ponteagudo blanco */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   .subscription {
     grid-column: 1 / 2;
-    padding: 50px 40px;
+    padding: 45px;
     background-color: variables.$dark-cyan;
     border-bottom-left-radius: 10px;
     display: flex;
@@ -102,7 +107,7 @@ main {
       background-color: variables.$light-green;
       text-align: center;
       padding: 15px 0;
-      width: 96%;
+      width: 90%;
       border: 0;
       border-radius: 10px;
       outline: none;
@@ -113,19 +118,21 @@ main {
 
   .whyus {
     grid-column: 2 / 3;
-    padding: 50px 40px;
+    padding: 45px;
     background-color: variables.$light-cyan;
     border-bottom-right-radius: 10px;
 
-    p ~ p {
-      margin-top: 6px;
-      font-size: 14;
+    p {
+      line-height: 24px;
     }
   }
 }
 
 @media screen and (max-width: 750px) {
   main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: unset;
     grid-template-columns: repeat(2, 180px);
   }
 
